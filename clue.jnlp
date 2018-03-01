@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- JNLP File for SwingSet2 Demo Application -->
+<jnlp spec="6.0+" codebase="https://aketcham0691.github.io/" href="clue.jnlp">
+  <information>
+    <title>Clue Game</title>
+    <vendor>Andrew Ketcham</vendor>
+    <homepage href=""/>
+    <description>Clue Game</description>
+    <description kind="short">Clue Game</description>
+    <icon href="Images/Andy.jpg"/>
+    <offline-allowed/>
+  </information>
+   <security>
+      <all-permissions/>
+  </security>
+  <resources>
+    <j2se version="1.6+"/>
+    <jar href="Products/Clue.jar"/>
+  </resources>
+  <application-desc main-class="code.Game"/>
+</jnlp>

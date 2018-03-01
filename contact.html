@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>see?</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+	  html {
+		  background-color: darkgrey;
+		}
+	#map {
+        height: 400px;
+        width: 400px;
+       }
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 100px;
+    }
+    
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+  </style>
+</head>
+<body>
+	
+	
+
+	
+	
+	
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Projects</a></li>
+        <li class="active"><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  
+<div class="container text-center">    
+  <br>
+  <div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-8"> 
+            <div class="well">
+       
+		   
+         <div class="row">
+	
+		 
+		 
+		 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="card">
+  
+  
+    <h1 align="center">Andrew Plewak</h1>
+    <p class="title" align="center">Software/Hardware Engineer,</p>
+    <p align="center">Buffalo NY</p>
+	  <palign="center"><b>andrewplewak@gmail.com</b></p>
+
+<p>	<a href="mailto:andrewplewak@gmail.com?subject=Feedback"> <span class="glyphicon glyphicon-envelope"</span></a> 
+	<b>Product suggestions  </b>
+</p>
+    
+	  
+
+</div>
+	
+		 
+		 
+		 
+		 
+    
+      
+    </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+    </div>
+  </div>
+</div><br>
+
+
+<footer class="container-fluid text-center">
+					   
+<div id="googleMap" style="width:100%;height:400px;"></div>
+
+<script>
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(42.955998, -78.696324),
+    zoom:50,
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+	  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Hello World!'
+  });
+	
+	marker.setMap(map);
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC21BAP_sj3LP7rxdqpMMG95ykq7di3e9A&callback=myMap"></script>				   
+										   
+										   
+</footer>
+
+</body>
+</html>

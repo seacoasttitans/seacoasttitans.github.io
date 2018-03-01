@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Andrew Ketcham</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
+      <style>
+         body {
+         position: relative; 
+         }
+         i{
+            font-size:24px;
+            margin-left:10px;
+            margin-right:10px;
+         }
+         .carousel-caption {
+            top: 45%;
+            bottom: auto;
+         }
+         hr{
+         border: none;
+         height: 1px;
+         /* Set the hr color */
+         color: #b0b5ba; /* old IE */
+         background-color: #b0b5ba; /* Modern Browsers */
+         width:50%;
+         margin-bottom:50px;
+         }
+         .glyphicon, .fa{
+            color:#ffffff;
+         }
+         .img-responsive img{
+         max-width: 100%; /* do not stretch the bootstrap column */
+         max-height: 100%;
+         }
+         .img-circle img{
+         max-width: 100%; /* do not stretch the bootstrap column */
+         max-height: 100%;
+         }
+         .img-circle {
+         max-width: 100%; /* do not stretch the bootstrap column */
+         max-height: 100%;
+         }	  
+         .img-wrapper{
+         align: center;
+         width: 55%;
+         height: 55%;
+         padding-bottom: 55%; /* your aspect ratio here! */
+         position: relative;
+         }
+         .img-wrapper img{
+         position: absolute;
+         top: 0; 
+         bottom: 0; 
+         left: 0; 
+         right: 0;
+         min-height: 100%; /* optional: if you want the smallest images to fill the .thumbnail */
+         }
+         .with-margin{
+         margin-bottom: 30px;
+         }
+         .list-group:hover { 
+         background-color: #ffffff;
+         color: #000000;
+         }  
+         .list-group:active { 
+         background-color: #ffffff;
+         color: #000000;
+         }  	  
+         .	  
+         .list-group {
+         font-size: 1.2em;	  
+         color: #ffffff;
+         font-family:'Open Sans', sans-serif;
+         font-weight:bold;	  
+         }
+         a.list-group-item {
+         font-size: 1.2em;	  
+         color: #ffffff;
+         font-family:'Open Sans', sans-serif;
+         font-weight:bold;
+         }
+         a.list-group-item:hover, .btn:hover, .btn-info:hover .btn-lg:hover { 
+         background-color: #ffffff;
+         color: #000000;
+         }
+         .btn, .btn-info, .btn-lg{
+         font-size: 1.2em;
+         height:100%;
+         width:100%;
+         border:none;
+         background:none;
+         font-family:'Open Sans', sans-serif;
+         font-weight:bold;
+         }
+         .btn:focus, .btn-info:focus, .btn-lg:focus{
+         border:none;
+         outline:none;
+         color:#000000;
+         background-color:#ffffff;
+         }
+         .btn:active, .btn-info:active, .btn-lg:active{
+         border:none;
+         outline:none;
+         color:#000000;
+         background-color:#ffffff;
+         }	  
+         .modal-title{
+         font-size: 1.2em;	  
+         color: #000000;
+         font-family:'Open Sans', sans-serif;
+         font-weight:bold;
+         }
+         background-img {
+         height: auto;
+         max-width: 100%;
+         }
+         #landing {padding-top:50px; color: #ffffff; 
+         background-image: url("aketcham0691.github.io/Images/bg.jpg");
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-position: center;
+         background-size: 100% 100%;}
+         #about {padding-top:50px;padding-bottom:50px;background-color: #Ffffff; color: #000000;
+         text-align:center;
+         font-family:'Open Sans', sans-serif;}
+         #projects {padding-top:50px;padding-bottom:50px;background-color: #26262A;
+         color: #ffffff;
+         text-align:center;
+         font-family:'Open Sans', sans-serif;
+         background-image: url("aketcham0691.github.io/Images/projbg.jpg");
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-position: center;
+         background-size: 100% 100%;}
+         #experience {padding-top:50px;padding-bottom:50px;background-color: #Ffffff; color: #000000;
+         text-align:center;
+         font-family:'Open Sans', sans-serif;}
+         #contact {padding-top:50px;padding-bottom:50px;background-color: #1f2021; color: #ffffff;
+         text-align:center;
+         font-family:'Open Sans', sans-serif;}
+         @media only screen and (max-width: 989px){
+         #landing{
+         padding-top:100px;
+         background-color: #000000;
+         padding-bottom:60px;
+         }
+         #projects{
+         padding-top:100px;
+         background-color: #000000;
+         padding-bottom:60px;
+         }
+         }
+         @media only screen and (min-width: 990px){
+         #landing{
+         height:750px;
+         }
+         }
+         @media only screen and (min-width: 1200px){
+         #landing{
+         height:1000px;
+         }
+         }
+         h1 {
+         font-size:2.2em;
+         font-family:'Open Sans', sans-serif;
+         font-weight:bold;
+         }
+         h2 {
+         font-family:'Open Sans', sans-serif;
+         font-size:2.2em;
+         font-weight:bold;
+         } 
+         h3 {
+         font-family:'Open Sans', sans-serif;
+         font-size:1.4em;
+         margin-top:10px;
+         }
+         h4 {
+         font-family:'Open Sans', sans-serif;
+         font-size:1.2em;
+         }
+         h5 {
+         font-family:'Open Sans', sans-serif;
+         font-size:1.7em;
+         } 	  
+         h6 {
+         font-family:'Open Sans', sans-serif;
+         font-size:1.1em;
+         color:#484a4c;
+         }
+         h7 {
+         font-family:'Open Sans', sans-serif;
+         font-size:1.1em;
+         color:#ffffff;
+         }	
+      </style>
+   </head>
+   <body data-spy="scroll" data-target=".navbar">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>                        
+               </button>
+               <a class="navbar-brand" href="#landing">Andrew Ketcham</a>
+            </div>
+            <div>
+               <div class="collapse navbar-collapse" id="myNavbar">
+                  <ul class="nav navbar-nav">
+                     <li><a href="#landing">Home</a></li>
+                     <li><a href="#about">About</a></li>
+                     <li><a href="#projects">Projects</a></li>
+                     <li><a href="#experience">Experience</a></li>
+                     <li><a href="#contact">Contact</a></li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                     <li style="font-size:24px;margin-left:10px;margin-right:10px"><a href="mailto:aketcham0691@gmail.com"><span class="fa fa-envelope"></span></a></li>
+                     <li style="font-size:24px;margin-left:10px;margin-right:10px"><a href="https://www.linkedin.com/in/andrew-ketcham-2718175a/"><span class="fa fa-linkedin-square"></span></a></li>
+                     <li style="font-size:24px;margin-left:10px;margin-right:10px"><a href="https://github.com/aketcham0691"><span class="fa fa-github"></span></a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </nav>
+      <div id="landing" class="container-fluid">
+         <div class="row" style="height:10%">
+         </div>
+         <div class="row" style="height:25%">
+            <div class="col-sm-12" align="center" style="height:100%">
+               <img src="aketcham0691.github.io/Images/Andy.jpg" class="img-circle" class="img-responsive"  alt="Cinque Terre" align="middle" style="border: #ffffff 3px solid;height:100%">
+            </div>
+         </div>
+         <div class="row" style="height:5%">
+         </div>
+         <div class="row" style="height:20%;text-align:center;font-size:2.2em;font-family:'Open Sans', sans-serif;font-weight:bold">
+            <p>I'M ANDREW KETCHAM</p>
+            <p>LET'S CREATE SOMETHING TOGETHER</p>
+         </div>
+         <div class="row" style="height:40%p">
+            <div class="col-md-4" align="center" style="height:100%">  
+            </div>
+            <div class="col-md-2" align="center" style="height:100%;background:none">
+               <div class="list-group" align="center" style="border:3px solid white">
+                  <a href="#about" class="list-group-item" style="border:none;background:none;font-family:'Open Sans', sans-serif;font-weight:bold">ABOUT ME</a>
+               </div>
+               <div class="list-group" align="center" style="border:3px solid white">
+                  <a href="#experience" class="list-group-item" style="border:none;background:none;font-family:'Open Sans', sans-serif;font-weight:bold">EXPERIENCE</a>
+               </div>
+            </div>
+            <div class="col-md-2" align="center" style="height:100%;background:none">
+               <div class="list-group" align="center" style="border:3px solid white">
+                  <a href="#projects" class="list-group-item" style="border:none;background:none;font-family:'Open Sans', sans-serif;font-weight:bold">PROJECTS</a>
+               </div>
+               <div class="list-group" align="center" style="border:3px solid white">
+                  <a href="aketcham0691.github.io/Documents/Andrew Ketcham Resume.pdf" class="list-group-item" style="border:none;background:none;font-family:'Open Sans', sans-serif;font-weight:bold">RESUME</a>
+               </div>
+            </div>
+            <div class="col-md-4" align="center" style="height:100%">  
+            </div>
+         </div>
+      </div>
+      <div id="about" class="container-fluid">
+         <h2><font color="#000000">About Me</font></h2>
+         <div class="row" style="height:5%">
+         </div>
+         <div class="row">
+            <div class="col-sm-3 with-margin" align="center">
+               <div class="img-wrapper with-margin" align="center">
+                  <img src="aketcham0691.github.io/Images/ub.jpg" class="img-circle" class="img-responsive"  alt="Cinque Terre" align="middle" style="border: #ffffff 3px solid">
+               </div>
+               <h3>Student</h3>
+               <h4>I'm a student of Computer Engineering at the University of Buffalo, where I have maintained a 3.98 GPA. I take pride in making meaningful contributions to my group projects.</h4>
+            </div>
+            <div class="col-sm-3 with-margin" align="center">
+               <div class="img-wrapper with-margin" align="center">
+                  <img src="aketcham0691.github.io/Images/programming.jpg" class="img-circle" class="img-responsive"  alt="Cinque Terre" align="middle" style="border: #ffffff 3px solid">
+               </div>
+               <h3>Programmer</h3>
+               <h4>I spend many hours a day programming during my free time, including programming C++, Java, and Python program changes, competing on CodeFights.com, and building this website.</h4>
+            </div>
+            <div class="col-sm-3 with-margin" align="center">
+               <div class="img-wrapper with-margin" align="center">	    
+                  <img src="aketcham0691.github.io/Images/mma.jpg" class="img-circle" class="img-responsive"  alt="Cinque Terre" align="middle" style="border: #ffffff 3px solid">
+               </div>
+               <h3>Martial Artist</h3>
+               <h4>I have trained in Tae Kwon Do, Jiu Jitsu, Muay Thai, and MMA and have competed and won gold medals in Tae Kwon Do and Jiu Jitsu in local and national tournaments.</h4>
+            </div>
+            <div class="col-sm-3 with-margin" align="center">
+               <div class="img-wrapper with-margin" align="center">
+                  <img src="aketcham0691.github.io/Images/climbing.jpg" class="img-circle" class="img-responsive"  alt="Cinque Terre" align="middle" style="border: #ffffff 3px solid">
+               </div>
+               <h3>Rock Climber</h3>
+               <h4>I spend hours each week in the rock climbing gym, attempting new problems and pursuing more challenging courses.</h4>
+            </div>
+         </div>
+      </div>
+      <div id="projects" class="container-fluid">
+         <h1><b><font color="#ffffff">PROJECTS</font></b></h1>
+         <p>Click on each project title to view code snippets and access github repositories.</p>
+         <div class="row">
+            <div class="col-sm-1 with-margin" align="center">
+            </div>
+            <div class="col-sm-3 with-margin" align="center">
+               <div class="img-wrapper" align="center">
+                  <img src="aketcham0691.github.io/Images/15.jpg" class="img-circle" class="img-responsive"  alt="Cinque Terre" align="middle" style="border: #ffffff 3px solid">
+               </div>
+            </div>
+            <div class="col-sm-7 with-margin" align="center">
+               <div class="list-group" align="center" style="border:3px solid white">
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">15 PUZZLE SOLVER</button>
+                  <div class="modal fade" id="myModal" role="dialog">
+                     <div class="modal-dialog modal-lg">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                           <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <p class="modal-title">15 Puzzle Solver</p>
+                           </div>
+                           <div class="modal-body">
+                              <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                 <!-- Indicators -->
+                                 <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                 </ol>
+                                 <!-- Wrapper for slides -->
+                                 <div class="carousel-inner">
+                                    <div class="item active">
+                                       <img src="aketcham0691.github.io/Images/astar.jpg" alt="Los Angeles">
+                                    </div>
+                                    <div class="item">
+                                       <img src="aketcham0691.github.io/Images/dbcreate.jpg" alt="Chicago">
+                                    </div>
+                                    <div class="item">
+                                       <img src="aketcham0691.github.io/Images/heuristic.jpg" alt="New York">
+                                    </div>               
+                                 </div>
+                                 <!-- Left and right controls -->
+                                 <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                 <span class="glyphicon glyphicon-chevron-left"></span>
+                                 <span class="sr-only">Previous</span>
+                                 </a>
+                                 <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                 <span class="glyphicon glyphicon-chevron-right"></span>
+                                 <span class="sr-only">Next</span>
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="modal-footer">
+                              <div class="row">
+                                 <div class="col-sm-6" align="center">	
+                                    <a href="https://github.com/aketcham0691/15-Puzzle" class="btn btn-info" role="button" style="color:#000000;background-color:transparent">GitHub</a>
+                                 </div>
+                                 <div class="col-sm-6" align="center">	
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" style="color:#000000">Close</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <h4>- Using knowledge of Artificial Intelligence search strategies, implemented A* Search in Python using the pattern database
+heuristic to solve the 15-Puzzle problem
+               </h4>
+               <h4>- Used SQLite to store pattern database and key read using search states to estimate best path to the goal state
+               </h4>          
+            </div>
+            <div class="col-sm-1 with-margin" align="center">
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-sm-1 with-margin" align="center">
+            </div>
+            <div class="col-sm-3 col-sm-push-7 with-margin" align="center">
+               <div class="img-wrapper" align="center">
+                  <img src="aketcham0691.github.io/Images/8bit.jpg" class="img-circle" class="img-responsive"  alt="Cinque Terre" align="middle" style="border: #ffffff 3px solid">
+               </div>
+            </div>
+            <div class="col-sm-7 col-sm-pull-3 with-margin" align="center">
+               <div class="list-group" align="center" style="border:3px solid white">
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal2">8 BIT COMPUTER</button>
+                  <div class="modal fade" id="modal2" role="dialog">
+                     <div class="modal-dialog modal-lg">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                           <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <p class="modal-title">8 Bit Computer</p>
+                           </div>
+                           <div class="modal-body">
+                              <div id="carousel2" class="carousel slide" data-ride="carousel">
+                                 <!-- Indicators -->
+                                 <ol class="carousel-indicators">
+                                    <li data-target="#carousel2" data-slide-to="0" class="active"></li>
+                                 </ol>
+                                 <!-- Wrapper for slides -->
+                                 <div class="carousel-inner">
+                                    <div class="item active">
+                                       <img src="aketcham0691.github.io/Images/dark8bit.jpg" alt="UBNL">
+                                       <div class="carousel-caption">
+                                       <h4 style="color:#ffffff">This project is a work-in-progress and will be updated as I complete more.</h4>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!-- Left and right controls -->
+                              </div>
+                           </div>
+                           <div class="modal-footer">
+                              <div class="row">
+                                 <div class="col-sm-12" align="center">	
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" style="color:#000000">Close</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <h4>- Implementing programmable 8-bit computer including RAM, Clock, CPU, busses, etc.</h4>
+               <h4>- Developing knowledge of electronics, including implementation of transistors, resistors, and capacitors in the creation of logical gates and computer parts.</h4>
+               <h4>- Developing own machine language in order to set input bits and run programs.</h4>
+            </div>
+            <div class="col-sm-1 with-margin" align="center">
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-sm-1 with-margin" align="center">
+            </div>
+            <div class="col-sm-3 with-margin" align="center">
+               <div class="img-wrapper" align="center">
+                  <img src="aketcham0691.github.io/Images/ubnl.jpg" class="img-circle" class="img-responsive"  alt="Cinque Terre" align="middle" style="border: #ffffff 3px solid">
+               </div>
+            </div>
+            <div class="col-sm-7 with-margin" align="center">
+               <div class="list-group" align="center" style="border:3px solid white">
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal3">NANOSATELLITE</button>
+                  <div class="modal fade" id="modal3" role="dialog">
+                     <div class="modal-dialog modal-lg">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                           <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <p class="modal-title">Nanosatellite</p>
+                           </div>
+                           <div class="modal-body">
+                              <div id="carousel3" class="carousel slide" data-ride="carousel">
+                                 <!-- Indicators -->
+                                 <ol class="carousel-indicators">
+                                    <li data-target="#carousel3" data-slide-to="0" class="active"></li>
+                                 </ol>
+                                 <!-- Wrapper for slides -->
+                                 <div class="carousel-inner">
+                                    <div class="item active">
+                                       <img src="aketcham0691.github.io/Images/ubnl2.jpg" alt="UBNL">
+                                       <div class="carousel-caption">
+                                       <h4 style="color:#ffffff">Unfortunately, codebase is confidential and property of NASA and US Air Force Research Lab</h4>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!-- Left and right controls -->
+                              </div>
+                           </div>
+                           <div class="modal-footer">
+                              <div class="row">
+                                 <div class="col-sm-12" align="center">	
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" style="color:#000000">Close</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <h4>- Designed C++ function to receive and queue image command requests to the satellite through use of vectors, mutexes, and
+                  multithreading (POSIX threads)
+               </h4>
+               <h4>- Identified performance improvement through use of priority queue in storing commands to satellite by time to execute</h4>
+            </div>
+            <div class="col-sm-1 with-margin" align="center">
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-sm-1 with-margin" align="center">
+            </div>
+            <div class="col-sm-3 col-sm-push-7 with-margin" align="center">
+               <div class="img-wrapper" align="center">
+                  <img src="aketcham0691.github.io/Images/infrared.jpg" class="img-circle" class="img-responsive"  alt="Cinque Terre" align="middle" style="border: #ffffff 3px solid">
+               </div>
+            </div>
+            <div class="col-sm-7 col-sm-pull-3 with-margin" align="center">
+               <div class="list-group" align="center" style="border:3px solid white">
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal4">INFRARED MOTION DETECTOR</button>
+                  <div class="modal fade" id="modal4" role="dialog">
+                     <div class="modal-dialog modal-lg">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                           <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <p class="modal-title">Infrared Motion Detector</p>
+                           </div>
+                           <div class="modal-body">
+                              <div id="carousel2" class="carousel slide" data-ride="carousel">
+                                 <!-- Indicators -->
+                                 <ol class="carousel-indicators">
+                                    <li data-target="#carousel2" data-slide-to="0" class="active"></li>
+                                 </ol>
+                                 <!-- Wrapper for slides -->
+                                 <div class="carousel-inner">
+                                    <div class="item active">
+                                       <img src="aketcham0691.github.io/Images/darkinfrared.jpg" alt="UBNL">
+                                       <div class="carousel-caption">
+                                       <h4 style="color:#ffffff">This project is a work-in-progress and will be updated as I complete more.</h4>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!-- Left and right controls -->
+                              </div>
+                           </div>
+                           <div class="modal-footer">
+                              <div class="row">
+                                 <div class="col-sm-12" align="center">	
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" style="color:#000000">Close</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <h4>- Implementing infrared motion detector using Arduino Yun to notify a user via SMS that their pet, or an intruder, has crossed
+an entryway</h4>
+               <h4>- Developing knowledge of embedded systems and their development</h4>
+            </div>
+            <div class="col-sm-1 with-margin" align="center">
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-sm-1 with-margin" align="center">
+            </div>
+            <div class="col-sm-3 with-margin" align="center">
+               <div class="img-wrapper" align="center">
+                  <img src="aketcham0691.github.io/Images/Clue.jpg" class="img-circle" class="img-responsive"  alt="Cinque Terre" align="middle" style="border: #ffffff 3px solid">
+               </div>
+            </div>
+            <div class="col-sm-7 with-margin" align="center">
+               <div class="list-group" align="center" style="border:3px solid white">
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal5">CLUE GAME</button>
+                  <div class="modal fade" id="myModal5" role="dialog">
+                     <div class="modal-dialog modal-lg">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                           <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <p class="modal-title">Clue Game</p>
+                           </div>
+                           <div class="modal-body">
+                              <div id="myCarousel4" class="carousel slide" data-ride="carousel">
+                                 <!-- Indicators -->
+                                 <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel4" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel4" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel4" data-slide-to="2"></li>
+                                    <li data-target="#myCarousel4" data-slide-to="3"></li>
+                                    <li data-target="#myCarousel4" data-slide-to="4"></li>
+                                 </ol>
+                                 <!-- Wrapper for slides -->
+                                 <div class="carousel-inner">
+                                    <div class="item active">
+                                       <img src="aketcham0691.github.io/Images/cluegamehome.jpg" alt="Los Angeles">
+                                    </div>
+                                    <div class="item">
+                                       <img src="aketcham0691.github.io/Images/cluegamemove.jpg" alt="Chicago">
+                                    </div>
+                                    <div class="item">
+                                       <img src="aketcham0691.github.io/Images/cluegamesug.jpg" alt="New York">
+                                    </div>
+                                    <div class="item">
+                                       <img src="aketcham0691.github.io/Images/cluecode.jpg" alt="New York">
+                                    </div>
+                                    <div class="item">
+                                       <img src="aketcham0691.github.io/Images/cluecode2.jpg" alt="New York">
+                                    </div>
+                                 </div>
+                                 <!-- Left and right controls -->
+                                 <a class="left carousel-control" href="#myCarousel4" data-slide="prev">
+                                 <span class="glyphicon glyphicon-chevron-left"></span>
+                                 <span class="sr-only">Previous</span>
+                                 </a>
+                                 <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                 <span class="glyphicon glyphicon-chevron-right"></span>
+                                 <span class="sr-only">Next</span>
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="modal-footer">
+                              <div class="row">
+                                 <div class="col-sm-6" align="center">	
+                                    <a href="https://github.com/aketcham0691/Clue-Game/tree/master/Class%20Project" class="btn btn-info" role="button" style="color:#000000;background-color:transparent">GitHub</a>
+                                 </div>
+                                 <div class="col-sm-6" align="center">	
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" style="color:#000000">Close</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <h4>- Implemented a GUI encompassing all of the various components of the game (board, players, hallways, doorways, rooms, etc.)
+                  using Java Swing components
+               </h4>
+               <h4>- Designed a recursive method using a modified depth-first search algorithm to calculate and return to the player a list of possible moves and pathways given a
+                  specific dice roll
+               </h4>
+               <h4>- Implemented game concepts such as guessing the killer, moving a player, dealing cards, and using passageways through use of complex logical statements and Java data types.</h4>
+            </div>
+            <div class="col-sm-1 with-margin" align="center">
+            </div>
+         </div>
+      </div>
+      <div id="experience" class="container-fluid">
+         <div class="row">
+            <div class="col-sm-2 with-margin" align="left">
+            </div>
+            <div class="col-sm-3 with-margin" align="left">
+               <h5>Work Experience</h5>
+            </div>
+            <div class="col-sm-5 with-margin" align="left">
+               <h3 style="margin:0px;margin-top:10px;font-weight:550">TECHNOLOGY INTERN, DEPOSIT OPERATIONS</h3>
+               <h3 style="margin-top:20px">M&T Bank, Buffalo, NY, June 2017 - August 2017</h3>
+               <h6>Identified area for process improvement by linking JCL symbolics between control cards, allowing for updates to production jobs to require less migration</h6>
+               <h6>Created multiple reports that identified accounts having an issue with statement delivery, and used complex logic and arrays to distribute accounts to various outputs</h6>
+               <h6>Gained experience with real-world test, certification, and production migration processes, including testing changes and documenting results</h6>
+               <h3 style="margin-top:80px;font-weight:550">TUTOR/TEACHING ASSISTANT</h3>
+               <h3 style="margin-top:20px">University at Buffalo, Buffalo, NY, January 2017 - June 2017</h3>
+               <h6>Held weekly review sessions to review material for roughly 25 students each week</h6>
+               <h6>Personally developed review questions and problems for students on a weekly basis</h6>
+               <h6>Graded quizzes and exams for roughly 100 students, including grade statistics and analysis for class professor</h6>
+               <h6>Held personalized tutoring sessions for students as needed, resulting in a marked improvement in class quiz and exam grades</h6>
+               <h3 style="margin-top:80px;font-weight:550">RISK ASSURANCE ASSOCIATE</h3>
+               <h3 style="margin-top:20px">PricewaterhouseCoopers, LLP, Buffalo, NY, June 2014 - June 2016</h3>
+               <h6>Identified and corrected gaps in walkthrough documentation that had previously led to deficient testing</h6>
+               <h6>Led review of banking client’s compliance with Regulation DD, including performing walkthroughs, obtaining evidence
+                  of compliance, leading a team of 8 testers, and communicating exceptions to client management
+               </h6>
+               <h6>Delegated testing responsibilities to new team members and reviewed work for adherence to quality measures</h6>
+               <h6>Tested and documented tests of clients’ Information Technology General Controls (ITGCs) in the areas of access to
+                  programs and data, program change, program development, and computer operations
+               </h6>
+               <h6>Built strong relationships with client management when performing walkthroughs</h6>
+            </div>
+            <div class="col-sm-2 with-margin" align="left">
+            </div>
+         </div>
+         <hr>
+         </hr>
+         <div class="row">
+            <div class="col-sm-2 with-margin" align="left">
+            </div>
+            <div class="col-sm-3 with-margin" align="left">
+               <h5>Technologies</h5>
+            </div>
+            <div class="col-sm-3 with-margin" align="left">
+               <h3 style="font-weight:550">DAY-TO-DAY COMFORT</h3>
+               <ul style="font-size:1.1em;color:#484a4c">
+                  <li>C++</li>
+                  <li>Java</li>
+                  <li>Easytrieve</li>
+                  <li>JCL</li>
+                  <li>MS Products</li>
+                  <li>Windows OS</li>
+                  <li>Linux / Ubuntu</li>
+                  <li>Eclipse</li>
+                  <li>CLion</li>
+                  <li>Version Control (GIT)</li>
+               </ul>
+            </div>
+            <div class="col-sm-2 with-margin" align="left">
+               <h3 style="font-weight:550">EXPERIENCE WITH</h3>
+               <ul style="font-size:1.1em;color:#484a4c">
+                  <li>COBOL</li>
+                  <li>HTML / CSS</li>
+                  <li>Python</li>
+                  <li>C</li>
+                  <li>Assembly</li>
+                  <li>SQLite</li> 
+               </ul>
+            </div>
+            <div class="col-sm-2 with-margin" align="left">
+            </div>
+         </div>
+         <hr>
+         </hr>
+         <div class="row">
+            <div class="col-sm-2 with-margin" align="left">
+            </div>
+            <div class="col-sm-3 with-margin" align="left">
+               <h5>Activities and Honors</h5>
+            </div>
+            <div class="col-sm-3 with-margin" align="left">
+               <h3 style="font-weight:550">ACTIVITIES</h3>
+               <ul style="font-size:1.1em;color:#484a4c">
+                  <li>Buffalo United Martial Arts (MMA, BJJ, Muay Thai)</li>
+                  <li>Niagara Climbing Center</li>
+                  <li>UB Nanosatellite Lab</li>
+               </ul>
+            </div>
+            <div class="col-sm-2 with-margin" align="left">
+               <h3 style="font-weight:550">HONORS</h3>
+               <ul style="font-size:1.1em;color:#484a4c">
+                  <li>Dean's List, May 2010 - Present</li>
+                  <li>Victor and Joan Brown Scholarship</li>
+                  <li>Allan and Judy Felong Trinkwald Scholarship</li>
+                  <li>NYSSCPA Outstanding Graduate Student Award</li>
+               </ul>
+            </div>
+            <div class="col-sm-2 with-margin" align="left">
+            </div>
+         </div>
+         <hr>
+         </hr>
+         <div class="row">
+            <div class="col-sm-2 with-margin" align="left">
+            </div>
+            <div class="col-sm-3 with-margin" align="left">
+               <h5>Education</h5>
+            </div>
+            <div class="col-sm-5 with-margin" align="left">
+               <h3 style="font-weight:550">BACHELOR OF SCIENCE IN COMPUTER ENGINEERING</h3>
+               <h6>University at Bufffalo, the State University of New York</h6>
+               <h6>Expected December 2018</h6>
+               <h6>GPA: 3.98</h6>
+               <h3 style="margin-top:80px;font-weight:550">MASTER OF SCIENCE IN ACCOUNTING</h3>
+               <h6>University at Bufffalo, the State University of New York</h6>
+               <h6>May 2015</h6>
+               <h6>GPA: 4.0</h6>
+               <h3 style="margin-top:80px;font-weight:550">BACHELOR OF SCIENCE IN ACCOUNTING</h3>
+               <h6>University at Bufffalo, the State University of New York</h6>
+               <h6>May 2014</h6>
+               <h6>GPA: 3.98</h6>
+            </div>
+            <div class="col-sm-2 with-margin" align="left">
+            </div>
+         </div>
+      </div>
+      <div id="contact" class="container-fluid">
+         <h5><font color="#ffffff">Contact Me</font></h5>
+         <p><h7>Andrew Ketcham<br/>
+            595 Niagara Street<br/>
+            Tonawanda, NY 14150<br/><br/>
+            Phone: (716) 860-0691<br/>
+            Email: aketcham0691@gmail.com</h7></p>
+         <div class="row" style="padding-top:20px">
+            <i><a href="mailto:aketcham0691@gmail.com"><span class="fa fa-envelope"></span></a></i>
+            <i><a href="https://www.linkedin.com/in/andrew-ketcham-2718175a/"><span class="fa fa-linkedin-square"></span></a></i>
+            <i><a href="https://github.com/aketcham0691"><span class="fa fa-github"></span></a></i>
+         </div>
+      </div>
+   </body>
+</html>
